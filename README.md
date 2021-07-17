@@ -1,6 +1,6 @@
-# D A I L Y_ J O U R N A L
+# T E C H_ J O U R N A L
 
 
-<h3> PROJECT IS IN UNDER CONSTRUCTION </h3>
+<h3> PROJECT IS AT LAST STAGE OF DEVELOPMENT. </h3>
 
 <img width="400" src="public/images/construction.png" ></img>
