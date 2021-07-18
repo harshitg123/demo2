@@ -1,0 +1,117 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+.background {
+  background-image: url('/images/background.png');
+  background-repeat: no-repeat;
+  background-size: 1536px auto;
+}
+
+.login-button {
+  width: 90%;
+  background-color: #75A99D;
+  color: #EDEDED;
+  border-radius: 50px;
+}
+
+.login-button:hover {
+  background-color: #90BAB0;
+  color: #EDEDED;
+}
+
+.admin {
+  position: absolute;
+  top: 130px;
+  left: 710px;
+  font-family: 'Open Sans', sans-serif;
+  color: #535353;
+}
+
+.login-btn {
+  margin-top: 33px;
+}
+
+.c-username {
+  margin-bottom: 20px;
+}
+
+.c-password {
+  margin-bottom: 20px;
+}
+
+.UP {
+  width: 90%;
+  height: 50px;
+  border-radius: 50px;
+  padding: 0 20px;
+  font-size: 1rem;
+  border: none;
+}
+
+.home {
+  color: #90BAB0;
+  position: absolute;
+  top: 600px;
+  left: 800px;
+}
+
+.home:hover {
+  color: #535353;
+  transition: all 0.5s;
+}
+
+
+.home-style {
+  color: black;
+}
+
+
+#login {
+  width: 30%;
+  position: absolute;
+  top: 253px;
+  left: 610px;
+}
+
+@media (max-width: 800px) {
+  #login {
+    position: relative;
+    width: 160%;
+    top: 320px;
+    left: 51px;
+  }
+
+  .admin {
+    position: absolute;
+    top: 202px;
+    left: 50px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #949494;
+    width: 150%;
+    font-size: 2.2rem;
+  }
+
+  .background {
+    background-image: url('/images/background-mobile.png');
+    background-repeat: no-repeat;
+    background-size: 180% auto;
+  }
+
+  .home {
+    width: 140%;
+    top: 700px;
+    left: 55px;
+    font-size: 4rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .background {
+    background-image: url('/images/background.png');
+    background-repeat: no-repeat;
+    background-size: 1536px auto;
+  }
+}

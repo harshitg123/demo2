@@ -1,4 +1,57 @@
-<%- include("partials/header") -%>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Journal</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="/images/favicon.svg">
+
+    <!-- facebook open graph -->
+    <meta property="og:url" content="https://www.harshitgupta.co.in/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tech Journal" />
+    <meta property="og:description" content="Tech Journal is an open platform where readers find dynamic thinking, They get awesome ideas for engineering projects also latest tech blogs." />
+    <meta property="og:image" itemprop="image" content="https://www.linkpicture.com/q/logo_500x500.jpg" />
+
+    <!-- twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Harshit64443967" />
+    <meta name="twitter:title" content="Tech Journal" />
+    <meta name="twitter:description" content="Tech Journal is an open platform where readers find dynamic thinking, They get awesome ideas for engineering projects also latest tech blogs." />
+    <meta name="twitter:image" content="https://www.linkpicture.com/q/logo_500x500.jpg" />
+
+    <!-- add link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/styles/a11y-dark.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/thinline.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.0.1/languages/go.min.js"></script>
+    <script src="ckeditor/ckeditor.js" charset="utf-8"></script>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container custom-style">
+        <a class="navbar-brand" href="/">TECH JOURNAL</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse  custom-style-items" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#technology">TECHNOLOGY</a></li>
+            <li class="nav-item"><a class="nav-link" href="#travel">TRAVEL</a></li>
+            <li class="nav-item"><a class="nav-link" href="https://www.harshitgupta.tech/" target="_blank">PORTFOLIO</a></li>
+          </ul>
+          <form class="account" action="/compose" method="get">
+            <button class="c-button btn" type="submit" name="button">Compose</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </head>
+<body>
 
 <div class="container content">
 
@@ -18,29 +71,29 @@
     <% if(post.category === "Projects") { %>
 
     <% if(projectSet === false) { %>
-    <h1 id="project" class="c-heading"><%= post.category %></h1>
+    <h1 id="project" class="c-heading "><%= post.category %></h1>
     <% projectSet = true %>
     <% } %>
 
     <div class="c-card col card mb-3">
       <img class="tech-img card-img-top" src=<%= post.image %>>
       <div class="card-body">
-        <h3 class="card-title"><%= post.title %></h3>
+        <h3 class="card-title home-style"><%= post.title %></h3>
         <% if(post.title.length > 45){ %>
-        <p class="card-text"><%- post.body.substring(0, 100) + "........" %></p>
+        <p class="card-text home-style"><%- post.body.substring(0, 100) + "........" %></p>
         <a href="/posts/<%= post._id %>">
-          <button class="c-button btn btn-primary">Read More</button>
+          <button class="c-button btn">Read More</button>
         </a>
         <% } else if(postContent.length > 100){ %>
-        <p class="card-text"><%- post.body.substring(0, 100) + "........" %></p>
+        <p class="card-text home-style"><%- post.body.substring(0, 100) + "........" %></p>
         <a href="/posts/<%= post._id %>">
-          <button class="c-button btn btn-primary">Read More</button>
+          <button class="c-button btn">Read More</button>
         </a>
         <% }else{ %>
-        <p class="card-text"><%- postContent %></p>
+        <p class="card-text home-style"><%- postContent %></p>
         <% } %>
         <p class="foot card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted">Published on <%= post.publishedDate %></small>
         </p>
       </div>
     </div>
@@ -48,58 +101,58 @@
     <% } else if(post.category === "Technology"){ %>
 
     <% if(technologySet === false) { %>
-    <h1 id="technology" class="c-heading"><%= post.category %></h1>
+    <h1 id="technology home-style" class="c-heading"><%= post.category %></h1>
     <% technologySet = true %>
     <% } %>
 
     <div class="c-card col card mb-3">
       <img class="tech-img card-img-top" src=<%= post.image %>>
       <div class="card-body">
-        <h3 class="card-title"><%= post.title %></h3>
+        <h3 class="card-title home-style"><%= post.title %></h3>
         <% if(post.title.length > 45){ %>
-        <p class="card-text"><%- post.body.substring(0, 100) + "........" %></p>
+        <p class="card-text home-style"><%- post.body.substring(0, 100) + "........" %></p>
         <a href="/posts/<%= post._id %>">
-          <button class="c-button btn btn-primary">Read More</button>
+          <button class="c-button btn ">Read More</button>
         </a>
         <% } else if(postContent.length > 100){ %>
-        <p class="card-text"><%- post.body.substring(0, 100) + "........" %></p>
+        <p class="card-text home-style"><%- post.body.substring(0, 100) + "........" %></p>
         <a href="/posts/<%= post._id %>">
-          <button class="c-button btn btn-primary">Read More</button>
+          <button class="c-button btn">Read More</button>
         </a>
         <% }else{ %>
-        <p class="card-text"><%- postContent %></p>
+        <p class="card-text home-style"><%- postContent %></p>
         <% } %>
         <p class="foot card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted">Published on <%= post.publishedDate %></small>
         </p>
       </div>
     </div>
 
     <% } else {%>
     <% if(personalSet === false) { %>
-    <h1 id="travel" class="c-heading"><%= post.category %></h1>
+    <h1 id="travel home-style" class="c-heading"><%= post.category %></h1>
     <% personalSet = true %>
     <% } %>
 
     <div class="c-card col card mb-3">
       <img class="tech-img card-img-top" src=<%= post.image %>>
       <div class="card-body">
-        <h3 class="card-title"><%= post.title %></h3>
+        <h3 class="card-title home-style"><%= post.title %></h3>
         <% if(post.title.length > 45){ %>
-        <p class="card-text"><%- post.body.substring(0, 100) + "........" %></p>
+        <p class="card-text home-style"><%- post.body.substring(0, 100) + "........" %></p>
         <a href="/posts/<%= post._id %>">
-          <button class="c-button btn btn-primary">Read More</button>
+          <button class="c-button btn">Read More</button>
         </a>
         <% } else if(postContent.length > 100){ %>
-        <p class="card-text"><%- post.body.substring(0, 100) + "........" %></p>
+        <p class="card-text home-style"><%- post.body.substring(0, 100) + "........" %></p>
         <a href="/posts/<%= post._id %>">
-          <button class="c-button btn btn-primary">Read More</button>
+          <button class="c-button btn">Read More</button>
         </a>
         <% }else{ %>
-        <p class="card-text"><%- postContent %></p>
+        <p class="card-text home-style"><%- postContent %></p>
         <% } %>
         <p class="foot card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
+          <small class="text-muted">Published on <%= post.publishedDate %></small>
         </p>
       </div>
     </div>
@@ -110,5 +163,7 @@
   </div>
 </div>
 </div>
+
+<!-- add -->
 
 <%- include("partials/footer") -%>

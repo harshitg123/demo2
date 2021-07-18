@@ -20,6 +20,11 @@
       </select>
 
       <div class="mb-3">
+        <label class="form-label">Description</label>
+        <input placeholder="Give your article a brief description." type="text" class="form-control" name="description">
+      </div>
+
+      <div class="mb-3">
         <label class="form-label">Image URL</label>
         <input placeholder="Please add 600x280(aprox) image URL for better view." type="text" class="form-control" name="postImage">
       </div>
@@ -29,8 +34,13 @@
         <div id="Wraping">
           <input class="spacing form-control" placeholder="Enter product URL_1" type="text" name="products[]">
         </div>
-        <button id="btn-add" class="c-button compose-btn btn " type="button" name="add">Add</button>
-        <button id="btn-remove" class="c-button compose-btn btn " type="button" name="remove">Remove</button>
+        <button id="btn-add" class="c-button btn " type="button" name="add">Add</button>
+        <button id="btn-remove" class="c-button btn " type="button" name="remove">Remove</button>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Project Video</label>
+        <input placeholder="Link for Youtube video" type="text" class="form-control" name="project">
       </div>
 
       <div class="mb-3">
@@ -38,7 +48,7 @@
         <textarea class="editor1" id="editor1" rows="10" cols="80" name="postBody"></textarea>
       </div>
 
-      <button type="submit" class="c-button compose-btn btn">Publish</button>
+      <button id="composeSubmit" type="submit" class="c-button compose-btn btn">Publish</button>
     </form>
 
   </div>

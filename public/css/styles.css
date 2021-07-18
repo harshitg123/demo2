@@ -1,5 +1,31 @@
+/* * {
+  box-sizing: border-box;
+} */
+body {
+  /* margin-top: 50px; */
+  background-color: #35333b;
+  color: white;
+}
+
+h1 {
+  color: #ebecee;
+  letter-spacing: 5px;
+}
+
+p {
+  color: white;
+}
+
+.home-style {
+  color: black;
+}
+
+.card .card-body>p {
+  color: black;
+}
+
 .content {
-  margin-top: 25px;
+  margin-top: 170px;
 }
 
 .container-fluid {
@@ -27,10 +53,12 @@
 }
 
 .footer {
+  position: relative;
+  bottom: 0;
   width: 100%;
-  margin-top: 60px;
+  margin-top: 30px;
   background-color: black;
-  height: 250px;
+  height: 324px;
 }
 
 .footer-msg {
@@ -42,7 +70,8 @@
 
 .copyright {
   text-align: center;
-  margin: 50px 40% 0;
+  margin: 117px 0 0;
+  /* height: 10px; */
   font-size: 12px;
   color: #fff;
 }
@@ -104,7 +133,7 @@
 .c-select {
   width: 20%;
   position: absolute;
-  top: 196px;
+  top: 258px;
   right: 123px;
 }
 
@@ -147,6 +176,7 @@
   width: 50px;
   border-radius: 50px;
   border: 0;
+  z-index: 1;
   outline: none !important;
   background-color: #282828;
 }
@@ -185,121 +215,146 @@
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-.account{
+.account {
   margin: 0 5px;
   /* display: none; */
 }
 
-.amazonOffers{
+.amazonOffers {
   position: absolute;
-  top: 214px;
+  top: 280px;
   right: 100px;
-  /* border: 1px solid black; */
   height: auto;
   width: 495px;
   padding: 0 2%;
 }
 
-.products{
+.products {
   margin: 50px 0 0;
   text-align: center;
 }
 
-iframe{
+iframe {
   margin: 30px 10px;
 }
 
-#btn-add{
+#btn-add {
   border: 1px solid #ced4da;
+  color: white;
   position: absolute;
   right: 282px;
-  top: 367.5px;
+  top: 430px;
   width: 145px;
   border-radius: 4px;
 }
 
-#btn-remove{
+#btn-remove {
   border: 1px solid #ced4da;
+  color: white;
   position: absolute;
   right: 124px;
-  top: 367.5px;
+  top: 430px;
   width: 145px;
   border-radius: 4px;
 }
 
-.c-username{
-  margin-bottom: 20px;
+#composeSubmit {
+  color: white;
 }
 
-.c-password{
-  margin-bottom: 20px;
+#composeSubmit:hover {
+  border: 1px solid white;
+  background-color: white;
+  color: black;
 }
 
-.UP{
-  width: 90%;
-  height: 50px;
-  border-radius: 50px;
-  padding: 0 20px;
-  font-size: 1rem;
-  border: none;
+.bottomForAlign {
+  text-align: center;
 }
 
-/* .password{
-  width: 90%;
-  height: 50px;
-  border-radius: 50px;
-  padding: 0 20px;
-  font-size: 1rem;
-  border: none;
-} */
-
-.login-button{
-  width: 90%;
-  background-color: #75A99D;
-  color: #EDEDED;
-  /* margin-left: 10px; */
-  border-radius: 50px;
-}
-
-.login-button:hover{
-  background-color: #90BAB0;
-  color: #EDEDED;
-}
-
-.admin{
-  position: absolute;
-  top:130px;
-  left: 710px;
-  font-family: 'Open Sans', sans-serif;
-  color:  #535353;
-}
-
-.login-btn{
-  margin-top: 33px;
-}
-
-.home{
-  color: #90BAB0;
-  position: absolute;
-  top: 600px;
-  left: 800px;
-}
-
-.home:hover{
-  color: #535353;
-  transition: all 0.5s;
-}
-
-#login{
+#signup {
   width: 30%;
   position: absolute;
-  top:253px;
-  left: 610px;
-}
-
-#signup{
-  width: 30%;
-  position: absolute;
-  top:240px;
+  top: 240px;
   left: 600px;
 }
+
+.digitalocean {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  bottom: 100px;
+}
+
+.bottomForAlign_2 {
+  text-align: center;
+margin-top: 60px;
+}
+
+.between-block-img{
+  width:80%;
+  height: 9%x;
+  margin: 20px 0;
+  /* text-align: center; */
+}
+
+@media (max-width: 800px) {
+  body .background{
+    background-image: url('images/background-mobile.png');
+  }
+
+  .youtube {
+    width: 275px;
+    height: 155px;
+  }
+
+  .bottomForAlign_2 {
+    display: none;
+  }
+
+  .bottomForAlign_1 {
+    text-align: center;
+    height: 300px;
+  }
+
+  .card {
+    width: 87.5%;
+  }
+
+  .tech-img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .single-post-img {
+    width: 100%;
+  }
+
+  .amazonOffers {
+    display: none;
+  }
+
+  .scrollToTop {
+    right: 20px;
+    bottom: 30px;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media (min-width: 800px) {
+  .card {
+    width: 45%;
+  }
+
+  .tech-img {
+    width: 100%;
+    height: 280px;
+  }
+
+  .bottomForAlign_1 {
+    display: none;
+  }
+}
+
+/* bottomForAlign - Amazon Single add(first insert div & put this class), youtube video. */
