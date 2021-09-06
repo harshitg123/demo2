@@ -1,6 +1,5 @@
 # T E C H_ J O U R N A L
 
+Tech Journal is a website where readers will find awesome engineering projects related blogs also there will we some more sections such as Technology those section will have blogs related to Programming & Recent Technology.
 
-<h3> PROJECT IS AT LAST STAGE OF DEVELOPMENT. </h3>
-
-<img width="400" src="public/images/construction.png" ></img>
+<img src="public/images/home.PNG" ></img>
