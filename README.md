@@ -30,7 +30,7 @@ Compose is the page from where admin can post new blog under any of the respecti
 <img align="right" width="190" src="public/images/construction.png" ></img>
 
 <ul>
-  <li> Tech journal is not available for everyone i.e not everyone can post blogs on the website, I am working to make this avialable for everyone. </li>
+  <li> Tech journal is not available for everyone i.e not everyone can post blogs on the website, I am working to make this available for everyone. </li>
   <li> Setup authentication and authorization. </li>
   <li> Enhancement of User Interface.</li>
 </ul>
